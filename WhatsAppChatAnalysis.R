@@ -4,15 +4,6 @@ library("stringr")
 
 chat <- rwa_read("F:\\Datasets\\whatsapp_chat.txt")
 chat <- na.omit(chat)
-chat <- chat[chat$author != "+91 87544 05449", ]
-chat <- chat[chat$author != "Kalaivani", ]
-
-chat$author <-str_replace_all(chat$author, "Usha Vijay", "User1")
-chat$author <-str_replace_all(chat$author, "Asha", "User2")
-chat$author <-str_replace_all(chat$author, "Kalaivani UK", "User3")
-chat$author <-str_replace_all(chat$author, "Rama", "User4")
-
-
 
 setwd("F://R Projects")
 library("dplyr")
